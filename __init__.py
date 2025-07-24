@@ -1,0 +1,1 @@
+from workmate import service #noqa
