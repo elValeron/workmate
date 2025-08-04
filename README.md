@@ -37,10 +37,13 @@
 
         '-r'|'--report' - название отчёта, по умолчанию average
 
-Вывод со всеми параметрами:
+Пример вывода со всеми параметрами:
     
 <img width="1085" height="212" alt="Image" src="https://github.com/user-attachments/assets/a7d82e73-6cdc-4640-a088-c52c72014e1b" />
     
+Пример вывода без параметра report:
+
+<img width="932" height="214" alt="Image" src="https://github.com/user-attachments/assets/97e87542-d18f-4501-ae44-20aee47790b8" />
 
 
 Автор [elValeron](https://github.com/elValeron/)
