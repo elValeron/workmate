@@ -39,6 +39,7 @@
 
 ### Примеры использования:
     Вывод со всеми параметрами:
+    <img width="1085" height="212" alt="Image" src="https://github.com/user-attachments/assets/a7d82e73-6cdc-4640-a088-c52c72014e1b" />
     
 
 
