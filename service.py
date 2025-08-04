@@ -28,7 +28,6 @@ def aggregate_log_file(file_obj, date_filter):
     for line in file_obj:
         try:
             row = json.loads(line)
-            
             date_from_file = row.get('@timestamp')
             if date_from_file:
                 line_timestamp = datetime.fromisoformat(date_from_file).date()
