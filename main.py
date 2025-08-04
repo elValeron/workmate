@@ -1,7 +1,10 @@
 import argparse
+
 from prettytable import PrettyTable
+
 from service import get_result
 from validators import check_args_is_not_empty, validate_date_format
+
 
 def main(parser: argparse.ArgumentParser, table: PrettyTable):
     parser.add_argument(
@@ -21,7 +24,9 @@ def main(parser: argparse.ArgumentParser, table: PrettyTable):
         default='average'
     )
     args = parser.parse_args()
-    table.title = '_'.join([arg for arg in args.report])
+    table.title = args.report
+    if not args.report == 'average':
+        table.title = '_'.join([arg for arg in args.report])
     table.field_names = ['URL', 'Count', 'AVG_response_time']
     try:
         check_args_is_not_empty(args)
@@ -36,7 +41,9 @@ def main(parser: argparse.ArgumentParser, table: PrettyTable):
     except ValueError as error:
         print(str(error))
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
+
     parser = argparse.ArgumentParser()
     table = PrettyTable()
     print(main(parser, table))

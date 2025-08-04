@@ -1,1 +1,1 @@
-from workmate import service #noqa
+from workmate import service # noqa

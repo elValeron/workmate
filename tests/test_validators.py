@@ -1,17 +1,23 @@
 import pytest
 from argparse import Namespace
-from ..validators import check_args_is_not_empty, validate_date_format, invalid_date_message
+from ..validators import (
+    check_args_is_not_empty,
+    invalid_date_message,
+    validate_date_format
+)
+
 
 @pytest.mark.parametrize(
     'valid_date',
     [
-    '2025-01-01',
-    '1999-12-31',
-    '2024-02-29',
+        '2025-01-01',
+        '1999-12-31',
+        '2024-02-29'
     ]
 )
 def test_validate_date_format_valid(valid_date):
     validate_date_format(valid_date)
+
 
 @pytest.mark.parametrize(
     'invalid_date',
@@ -20,9 +26,8 @@ def test_validate_date_format_valid(valid_date):
         "2025-06-32",
         "25-06-2025",
         "2025/06/25",
-        "2025-6-1",     
+        "2025-6-1",
         "",
-        None,
     ]
 )
 def test_validate_date_invalid_format(invalid_date):

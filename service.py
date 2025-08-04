@@ -2,7 +2,7 @@ import json
 from datetime import datetime, date
 
 
-def get_result(file_list, round_digits: int = 3, date_filter = None):
+def get_result(file_list, round_digits: int = 3, date_filter=None):
     if date_filter:
         date_filter = date.fromisoformat(date_filter)
     result = {}
@@ -23,8 +23,8 @@ def get_result(file_list, round_digits: int = 3, date_filter = None):
 
 
 def aggregate_log_file(file_obj, date_filter):
+
     result = {}
-    
     for line in file_obj:
         try:
             row = json.loads(line)
@@ -47,4 +47,3 @@ def aggregate_log_file(file_obj, date_filter):
             print(str(error))
             continue
     return result
-
